@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->unsignedBigInteger('product_id');
-            // foreign key and cascade delete
+            // Define the foreign key relationship and cascading delete
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')
